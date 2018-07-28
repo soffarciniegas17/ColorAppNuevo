@@ -86,7 +86,7 @@ public class Partida extends AppCompatActivity {
 
     public void comparar (){
         if (pb==p){
-            bien++
+            bien++;
         } else {
             mal++;
             intentos--;
@@ -197,12 +197,30 @@ public class Partida extends AppCompatActivity {
             public void onClick(View v) {
                 i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_TEXT, "HE GANADO EL PUNTAJE "+ porcentaje+ " EN COLORITO APP");
+                i.putExtra(Intent.EXTRA_TEXT, "HE GANADO EL PUNTAJE "+ porcentaje+ " EN COLORAPP");
+                i.setPackage("com.facebook.katana");
                 startActivity(i);
             }
         });
 
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_TEXT, "HE GANADO EL PUNTAJE "+ porcentaje+ " EN COLORAPP");
+                i.setPackage("com.twitter.android");
+                startActivity(i);
+            }
+        });
 
+    }
+    public String porcentaje(){
+        double tiempoNormal = total*1000;
+        double tiempoG = ontick*1000;
+
+        porcentaje= (bien*tiempoNormal)*100/(total*tiempoG);
+        return String.format("%.2f", porcentaje);
     }
 
 }
