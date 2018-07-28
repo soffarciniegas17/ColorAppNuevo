@@ -1,6 +1,7 @@
 package com.sophia1.colorappnuevo;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -164,9 +165,43 @@ public class Partida extends AppCompatActivity {
             }
         }.start();
     }
-
+    Intent i;
     public void finalJuego(){
         finaljuego.show();
+
+        inicio = finaljuego.findViewById(R.id.inicio);
+        reinicio = finaljuego.findViewById(R.id.reiniciar);
+        facebook = finaljuego.findViewById(R.id.facebook);
+        twitter = finaljuego.findViewById(R.id.twitter);
+
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finaljuego.dismiss();
+                i = new Intent(Partida.this, Home.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        reinicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finaljuego.dismiss();
+                tiempoPartida();
+            }
+        });
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_TEXT, "HE GANADO EL PUNTAJE "+ porcentaje+ " EN COLORITO APP");
+                startActivity(i);
+            }
+        });
+
 
     }
 
