@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="MODO PARTIDA"
+        >
+        <ListPreference
+            android:title="Partida"
+            android:summary="Escoge una opción para la partida"
+            android:key="MODOPARTIDA"
+            android:entries="@array/valores_mp"
+            android:entryValues="@array/valores_mp"
+            android:icon="@drawable/icono_md"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="PARTIDA OPCIONES"
+        >
+        <EditTextPreference
+            android:title="Tiempo Partida"
+            android:summary="Digita el tiempo de cada partida"
+            android:key="TIEMPOPARTIDO"
+            android:inputType="number"
+            android:maxLength="2"
+            android:icon="@drawable/icono_tiempo"
+            />
+        <EditTextPreference
+            android:title="Duración Palabra"
+            android:summary="Digita la duración de cada palabra mostrada"
+            android:key="TIEMPOPALABRA"
+            android:inputType="number"
+            android:maxLength="1"
+            android:icon="@drawable/icono_tp"
+            />
+        <EditTextPreference
+            android:title="Intentos"
+            android:summary="Digita cuantos intentos por partida"
+            android:key="INTENTOS"
+            android:inputType="number"
+            android:maxLength="1"
+            android:icon="@drawable/icono_intentos"
+            />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="COMIENZA PARTIDA"
+        >
+
+        <Preference
+            android:title="PLAY"
+            android:summary="Inicia la partida personalizada"
+            android:icon="@drawable/icono_partida"
+            >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.sophia1.colorappnuevo"
+                android:targetClass="com.sophia1.colorappnuevo.Partida"
+                />
+
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
