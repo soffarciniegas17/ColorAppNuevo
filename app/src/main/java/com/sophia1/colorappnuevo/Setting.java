@@ -16,6 +16,7 @@ public class Setting extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_setting);
         getFragmentManager().beginTransaction().replace(R.id.layout_setting, new Pref()).commit();
+        //alex
     }
     public void onPause(){
         super.onPause();
