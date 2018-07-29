@@ -1,5 +1,6 @@
 package com.sophia1.colorappnuevo;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,5 +26,14 @@ public class Setting extends AppCompatActivity {
 
         guarda.putInt("partida_modo",1);
         guarda.apply();
+    }
+    public void startActivity(Intent i){
+        super.startActivity(i);
+        finish();
+    }
+    public void onBackPressed(){
+        Intent i=new Intent(this, Home.class);
+        startActivity(i);
+        finish();
     }
 }

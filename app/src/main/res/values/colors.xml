@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#f5ff3f</color>
+    <color name="colorAccent">#ffcc4c</color>
 
     <color name="azul_claro">#363fc6</color>
     <color name="azul_oscuro">#160fa3</color>
@@ -15,5 +15,15 @@
 
     <color name="rojo_claro">#ce2f2f</color>
     <color name="rojo_oscuro">#7e0505</color>
+
+
+    <!--Alexander -->
+    <color name="fondo_inicio">#262626</color>
+
+    <color name="verde">#00d242</color>
+    <color name="rojo">#f71653</color>
+    <color name="azul">#1625ff</color>
+    <color name="amarillo">#ffbd16</color>
+    <!--Alexander -->
 
 </resources>
