@@ -18,7 +18,8 @@
 
 
     <!--Alexander -->
-    <color name="fondo_inicio">#262626</color>
+    <color name="fondo_inicio">#292929</color>
+    <color name="negro_tranparente">#a2000000</color>
 
     <color name="verde">#00d242</color>
     <color name="rojo">#f71653</color>

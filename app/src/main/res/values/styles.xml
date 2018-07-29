@@ -16,4 +16,52 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="puntajes_item_top">
+
+        <!--
+        <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textSize="34dp"/>
+
+        -->
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:text">1</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:textSize">25dp</item>
+
+
+    </style>
+    <style name="puntajes_item">
+        <!--
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="33%"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingRight="42dp"
+                android:textSize="24dp"/>
+
+        -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:text">0.0%</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingRight">42dp</item>
+        <item name="android:textSize">24dp</item>
+
+
+    </style>
+
 </resources>
