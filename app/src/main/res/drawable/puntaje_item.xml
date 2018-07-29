@@ -2,8 +2,8 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:width="290dp"
-        android:height="40dp"
+        android:width="280dp"
+        android:height="44dp"
 
         >
 
@@ -19,9 +19,9 @@
     </item>
 
     <item
-        android:width="47dp"
-        android:height="47dp"
-        android:top="-2dp"
+        android:width="45dp"
+        android:height="45dp"
+
 
         >
 
@@ -30,7 +30,7 @@
             <solid android:color="@android:color/black"/>
             <corners android:radius="22dp"/>
             <stroke android:color="@android:color/white"
-                android:width="1dp"/>
+                android:width="0.5dp"/>
         </shape>
 
     </item>

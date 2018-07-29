@@ -1,6 +1,7 @@
 package com.sophia1.colorappnuevo;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -188,6 +189,15 @@ public class Home extends AppCompatActivity {
         });
         organizaScores();
         scoresTop.show();
+
+        scoresTop.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                scoresTop.dismiss();
+                animarEntrada();
+                logoApp.startAnimation(aparecer);
+            }
+        });
 
 
     }
