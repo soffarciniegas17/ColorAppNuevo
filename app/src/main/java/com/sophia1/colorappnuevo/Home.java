@@ -121,8 +121,26 @@ public class Home extends AppCompatActivity {
             case R.id.bton_play:
                 break;
             case R.id.bton_scores:
-                abrirScores();
                 animarSalida();
+
+
+                salirI.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        abrirScores();
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+
                 break;
             case R.id.bton_setting:
                 animarSalida();
@@ -153,6 +171,7 @@ public class Home extends AppCompatActivity {
     public void abrirScores(){
         LinearLayout layoutScores=scoresTop.findViewById(R.id.layout_scores);
         final Animation aparecer=AnimationUtils.loadAnimation(this, R.anim.aparecer);
+        aparecer.setDuration(300);
         aparecer.setFillAfter(true);
         layoutScores.startAnimation(aparecer);
 
@@ -193,6 +212,7 @@ public class Home extends AppCompatActivity {
     public void cargarPuntajes(){
         DataBase db=new DataBase(this);
         Cursor cursor=db.puntajes();
+        if (cursor==null)return;
 
         if(cursor.moveToFirst()){
             int i=0;

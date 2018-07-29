@@ -10,7 +10,7 @@ public class DataBase extends SQLiteOpenHelper {
 
     Context context;
     private static final String dataName ="partida.db";
-    private static final String tableName = "CREARE TABLE JUEGO (ID INTEGER PRIMARY KEY AUTOINCREMENT, PUNTAJE DOUBLE)";
+    private static final String tableName = "CREATE TABLE JUEGO (ID INTEGER PRIMARY KEY AUTOINCREMENT, PUNTAJE DOUBLE)";
     private static final int version = 1;
 
     public DataBase(Context context){
